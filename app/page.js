@@ -1,5 +1,4 @@
-//components
-
+import dynamic from 'next/dynamic';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Steaks from './components/Steaks';
@@ -10,8 +9,11 @@ import Cta from './components/Cta';
 import Footer from './components/Footer';
 import BackToTopBtn from './components/BackToTopBtn';
 import Fixed from './components/Fixed';
-import GoogleMap from './components/GoogleMap';
 import Gallery from './components/Gallery';
+
+const DynamicGoogleMap = dynamic(() => import('./components/GoogleMap'), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -25,7 +27,7 @@ export default function Home() {
       <Cta />
       <Gallery />
       <Testimonials />
-      <GoogleMap />
+      <DynamicGoogleMap />
       <Footer />
       <BackToTopBtn />
     </main>
