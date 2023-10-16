@@ -8,21 +8,17 @@ export default function BackToTopBtn() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (typeof window !== 'undefined' && window.scrollY > 400) {
+      if (window.scrollY > 400) {
         setIsActive(true);
       } else {
         setIsActive(false);
       }
     };
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll);
-    }
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('scroll', handleScroll);
-      }
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
