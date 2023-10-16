@@ -25,7 +25,7 @@ export default function Steaks() {
         <MeatSlider selectedCategory={selectedCategory} />
         <div className=' flex items-center justify-center'>
           <Link
-            href='/siparis'
+            href='/order'
             className='btn btn-sm btn-accent w-[164px] text-white'
           >
             Sipariş Ver

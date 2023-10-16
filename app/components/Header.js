@@ -8,6 +8,7 @@ import { BiMenuAltRight, BiX } from 'react-icons/bi';
 import { SearchContext } from '../context/search';
 import { useTheme } from 'next-themes';
 import { RiMoonFoggyFill, RiSunFoggyFill } from 'react-icons/ri';
+import { FaPhoneAlt } from 'react-icons/fa';
 
 export default function Header() {
   const { setSearchActive } = useContext(SearchContext);
@@ -45,7 +46,7 @@ export default function Header() {
     <header
       className={`${
         header
-          ? 'bg-whiteColor dark:bg-[#100F0F] shadow-md py-2 '
+          ? 'bg-whiteColor dark:bg-[#080808] shadow-md py-2 '
           : 'bg-transparent shadow-none py-4'
       } fixed w-full max-w-[1920px] transition-all duration-300 zindex2`}
     >
@@ -76,8 +77,12 @@ export default function Header() {
             nav
               ? 'max-h-max py-8 px-4 xl:py-0 xl:px-0 '
               : 'max-h-0 xl:max-h-max '
-          } flex flex-col w-full bg-whiteColor dark:bg-[#100F0F] gap-y-6 dark:text-whiteColor overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[17px] xl:normal-case `}
+          } flex flex-col w-full bg-whiteColor dark:bg-[#080808] gap-y-6 dark:text-whiteColor overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[17px] xl:normal-case `}
         >
+          <div className='flex items-center justify-center space-x-2 cursor-pointer'>
+            <FaPhoneAlt size={15} className='text-accent' />
+            <p className='text-accent'>+905365867220</p>
+          </div>
           <Link className='cursor-pointer' href='/'>
             Anasayfa
           </Link>
@@ -87,15 +92,7 @@ export default function Header() {
           <Link className='cursor-pointer' href='/about'>
             Hakkımızda
           </Link>
-          <Link className='cursor-pointer' href='/iletisim'>
-            İletişim
-          </Link>
-          <Link
-            className='btn btn-primary btn-hover btn-sm max-w-[164px] mx-auto xl:hidden'
-            href='/siparis'
-          >
-            Tüm menüler
-          </Link>
+
           <button
             className='w-10 h-10 xl:w-fit xl:h-fit absolute right-14 top-7 xl:right-0 xl:top-0 p-2 rounded-md  active:scale-100 duration-500 xl:relative  xl:p-0 xl:scale-100'
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

@@ -123,9 +123,6 @@ const About = () => {
                   </h3>
                 </div>
               </motion.div>
-              <button className='hidden xl:block btn-hover rounded-[10px] w-full h-16 uppercase font-medium text-whiteColor tracking-[2px] text-[13px] max-w-[204px]'>
-                Menüleri Görüntüle
-              </button>
             </div>
           </div>
         </div>

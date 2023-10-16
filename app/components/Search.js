@@ -5,6 +5,7 @@ import { SearchContext } from '../context/search';
 import MenuSelection from './MenuSelection';
 import DrinkSelection from './DrinkSelection';
 import DessertSelection from './DessertSelection';
+import Link from 'next/link';
 
 export default function Search() {
   const { searchActive } = useContext(SearchContext);
@@ -21,13 +22,14 @@ export default function Search() {
         <DrinkSelection />
         <DessertSelection />
         <div className='xl:h-full flex items-center px-6 xl:px-0'>
-          <button
+          <Link
+            href='/order'
             className={`${
               searchActive ? 'xl:w-[164px]' : 'xl:w-[184px]'
             } btn btn-sm btn-accent xl:h-[50px]`}
           >
             Ara
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -26,10 +26,10 @@ export default function GridGallery({ images }) {
 
   return (
     <section
-      className=' flex items-start bg-[#b2b7c2]/10 dark:bg-gradient-to-tl from-black via-black to-stone-900 pt-24 xl:pt-[160px]  w-full '
+      className=' flex items-start bg-[#b2b7c2]/10 dark:bg-gradient-to-tl from-black via-black to-stone-900 pt-24 xl:pt-[160px] w-full'
       id='why'
     >
-      <div className='container mx-auto'>
+      <div className='container mx-auto mb-20'>
         <h1 className='h1 text-center text-black dark:text-whiteColor mb-20'>
           Galeri
         </h1>
