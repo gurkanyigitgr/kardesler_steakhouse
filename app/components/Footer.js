@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { FaPhone, FaEnvelope } from 'react-icons/fa6';
 import Copyright from './Copyright';
-import { BsInstagram, BsFacebook, BsTwitter } from 'react-icons/bs';
+import { BsInstagram, BsFacebook } from 'react-icons/bs';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -64,7 +64,7 @@ export default function Footer() {
               <ul className='flex justify-between xl:justify-center gap-x-5 font-semibold'>
                 <li>
                   <Link
-                    href={'https://www.google.com'}
+                    href={'https://www.instagram.com/onurrozelll/'}
                     className='cursor-pointer'
                   >
                     <BsInstagram size={30} />
@@ -76,14 +76,6 @@ export default function Footer() {
                     className='cursor-pointer'
                   >
                     <BsFacebook size={30} />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={'https://www.google.com'}
-                    className='cursor-pointer'
-                  >
-                    <BsTwitter size={30} />
                   </Link>
                 </li>
               </ul>

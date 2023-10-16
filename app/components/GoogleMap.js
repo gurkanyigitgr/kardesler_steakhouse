@@ -9,7 +9,7 @@ export default function GoogleMap() {
   const position = [41.040302350000005, 28.894600939511257]; // [latitude, longitude]
   return (
     <section
-      className='section flex items-start bg-[#b2b7c2]/10 dark:bg-gradient-to-tr from-black via-black to-stone-900 pt-24 xl:pt-[160px] xl:pb-[140px] w-full'
+      className='section flex items-start bg-[#b2b7c2]/10 dark:bg-gradient-to-b from-black via-black to-stone-900 pt-24 xl:pt-[160px] xl:pb-[140px] w-full'
       id='contact'
     >
       <div className='container mx-auto'>
