@@ -8,14 +8,13 @@ import 'swiper/css';
 
 export default function GridGallery({ images }) {
   const [slidesPerView, setSlidesPerView] = useState(3);
+
   useEffect(() => {
     const handleResize = () => {
-      if (typeof window !== 'undefined') {
-        if (window.innerWidth >= 1280) {
-          setSlidesPerView(4);
-        } else {
-          setSlidesPerView(2);
-        }
+      if (typeof window !== 'undefined' && window.innerWidth >= 1280) {
+        setSlidesPerView(4);
+      } else {
+        setSlidesPerView(2);
       }
     };
 
@@ -30,7 +29,7 @@ export default function GridGallery({ images }) {
 
   return (
     <section
-      className=' flex items-start bg-[#b2b7c2]/10 dark:bg-gradient-to-b from-black via-black to-stone-900 pt-24 xl:pt-[160px] w-full'
+      className='flex items-start bg-[#b2b7c2]/10 dark:bg-gradient-to-b from-black via-black to-stone-900 pt-24 xl:pt-[160px] w-full'
       id='why'
     >
       <div className='container mx-auto mb-20'>
@@ -38,32 +37,34 @@ export default function GridGallery({ images }) {
           Galeri
         </h1>
 
-        <Swiper
-          className='flex items-center justify-center rounded-2xl  bg-[#b2b7c2]/10 dark:bg-black'
-          slidesPerView={slidesPerView}
-          centeredSlides={true}
-          spaceBetween={30}
-          pagination={{
-            type: 'fraction',
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-        >
-          {images &&
-            images.map((imageUrl, index) => (
-              <SwiperSlide key={index} className='p-10'>
-                <div className='w-[220px] h-[220px] xl:w-[385px] xl:h-[485px] mx-auto sm:mx-0 mb-10 flex items-center justify-center mt-14 xl:mt-5'>
-                  <Image
-                    src={imageUrl}
-                    width={400}
-                    height={400}
-                    alt=''
-                    className='object-fill first-letter:p-5 cursor-pointer rounded-2xl'
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-        </Swiper>
+        {typeof window !== 'undefined' && (
+          <Swiper
+            className='flex items-center justify-center rounded-2xl bg-[#b2b7c2]/10 dark:bg-black'
+            slidesPerView={slidesPerView}
+            centeredSlides={true}
+            spaceBetween={30}
+            pagination={{
+              type: 'fraction',
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+          >
+            {images &&
+              images.map((imageUrl, index) => (
+                <SwiperSlide key={index} className='p-10'>
+                  <div className='w-[220px] h-[220px] xl:w-[385px] xl:h-[485px] mx-auto sm:mx-0 mb-10 flex items-center justify-center mt-14 xl:mt-5'>
+                    <Image
+                      src={imageUrl}
+                      width={400}
+                      height={400}
+                      alt=''
+                      className='object-fill first-letter:p-5 cursor-pointer rounded-2xl'
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+          </Swiper>
+        )}
       </div>
     </section>
   );
