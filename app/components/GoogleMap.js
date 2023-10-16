@@ -4,7 +4,27 @@ import 'leaflet-defaulticon-compatibility';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/variants';
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import dynamic from 'next/dynamic';
+
+const MapContainer = dynamic(
+  () => import('react-leaflet').then((module) => module.MapContainer),
+  {
+    ssr: false,
+  }
+);
+const TileLayer = dynamic(
+  () => import('react-leaflet').then((module) => module.TileLayer),
+  {
+    ssr: false,
+  }
+);
+const Marker = dynamic(
+  () => import('react-leaflet').then((module) => module.Marker),
+  {
+    ssr: false,
+  }
+);
+
 export default function GoogleMap() {
   const position = [41.040302350000005, 28.894600939511257]; // [latitude, longitude]
   return (
