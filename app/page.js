@@ -22,10 +22,10 @@ export default function Home() {
       <Why />
       <Fixed />
       <About />
+      <Cta />
       <Gallery />
       <Testimonials />
       <GoogleMap />
-      <Cta />
       <Footer />
       <BackToTopBtn />
     </main>
