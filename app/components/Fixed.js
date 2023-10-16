@@ -1,8 +1,8 @@
 export default function Fixed() {
   return (
-    <section className='section flex flex-col items-center p-0 bg-gradient-to-tl from-[#b2b7c2]/10 via-[#b2b7c2]/10 to-slate-300 dark:bg-black dark:from-black dark:via-black dark:to-black'>
+    <section className='flex flex-col items-center p-0 bg-gradient-to-tl from-[#b2b7c2]/10 via-[#b2b7c2]/10 to-slate-300 dark:bg-black dark:from-black dark:via-black dark:to-black'>
       <div className='mt-20 h-full w-full flex flex-col items-center'>
-        <div className='bg-fixed bg-no-repeat bg-cover bg-[center_center] h-[200px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-full w-full text-[white] text-center table bg-1 '>
+        <div className='bg-fixed bg-no-repeat bg-cover bg-[center_center] h-[200px] sm:h-[300px] md:h-[350px] xl:h-[400px] w-full text-[white] text-center table bg-1 '>
           <h1 className='text-white table-cell align-middle h1'>Misyon</h1>
         </div>
         <div className='py-10 p-5 flex items-center justify-center'>
@@ -13,7 +13,7 @@ export default function Fixed() {
           </p>
         </div>
 
-        <div className='bg-fixed bg-no-repeat bg-cover bg-[right_right] h-[200px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-full w-full text-[white] text-center table bg-2'>
+        <div className='bg-fixed bg-no-repeat bg-cover bg-[right_right] h-[200px] sm:h-[300px] md:h-[350px] xl:h-[400px] w-full text-[white] text-center table bg-2'>
           <h1 className='text-white h1 table-cell align-middle'>Vizyon</h1>
         </div>
         <div className='py-10 p-5 flex items-center justify-center'>
