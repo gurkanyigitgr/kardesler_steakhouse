@@ -22,16 +22,18 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setHeader(true);
-      } else {
-        setHeader(false);
-      }
+      if (typeof window !== 'undefined' && window.scrollY) {
+        if (window.scrollY > 40) {
+          setHeader(true);
+        } else {
+          setHeader(false);
+        }
 
-      if (window.scrollY > 800) {
-        setSearchActive(true);
-      } else {
-        setSearchActive(false);
+        if (window.scrollY > 800) {
+          setSearchActive(true);
+        } else {
+          setSearchActive(false);
+        }
       }
     };
 
@@ -40,7 +42,7 @@ export default function Header() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  });
+  }, [setSearchActive]);
 
   return (
     <header

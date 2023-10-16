@@ -10,18 +10,22 @@ export default function GridGallery({ images }) {
   const [slidesPerView, setSlidesPerView] = useState(3);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1280) {
-        setSlidesPerView(4);
-      } else {
-        setSlidesPerView(2);
+      if (typeof window !== 'undefined') {
+        if (window.innerWidth >= 1280) {
+          setSlidesPerView(4);
+        } else {
+          setSlidesPerView(2);
+        }
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
 
   return (

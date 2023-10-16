@@ -23,18 +23,20 @@ export default function MeatSlider({ selectedCategory }) {
   const [slidesPerView, setSlidesPerView] = useState(3);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1280) {
+      if (typeof window !== 'undefined' && window.innerWidth >= 1280) {
         setSlidesPerView(3);
       } else {
         setSlidesPerView(1);
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
   return (
     <motion.div
