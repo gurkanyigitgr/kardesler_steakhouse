@@ -9,7 +9,7 @@ export default function OrderSection({ selectedCategory }) {
     const message = cart
       .map((item) => `${item.name}: ${item.quantity} adet |`)
       .join('\n');
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=+905306122157&text=Sipariş vermek istiyorum.%0A%0A${encodeURIComponent(
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+905433713272&text=Sipariş vermek istiyorum.%0A%0A${encodeURIComponent(
       message
     )}`;
 

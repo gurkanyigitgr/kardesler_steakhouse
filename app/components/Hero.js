@@ -15,7 +15,7 @@ export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState(texts[currentIndex]);
   const whatsappUrl =
-    'https://api.whatsapp.com/send?phone=+905306122157&text=Merhaba! Sipariş vermek istiyorum.';
+    'https://api.whatsapp.com/send?phone=+905433713272&text=Merhaba! Sipariş vermek istiyorum.';
   const use_default = true;
 
   useEffect(() => {

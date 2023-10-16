@@ -40,7 +40,7 @@ export default function DessertSelection() {
               <Menu.Item as={Fragment} key={i}>
                 <div
                   key={i}
-                  className='cursor-pointer py-2 xl:pl-10 hover:bg-gray-100 text-[13px] uppercase'
+                  className='cursor-pointer py-2 xl:pl-10 text-blackColor hover:bg-gray-100 text-[13px] uppercase'
                   onClick={() => setDessert(dessert)}
                 >
                   {dessert}

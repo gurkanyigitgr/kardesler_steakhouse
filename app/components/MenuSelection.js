@@ -41,7 +41,7 @@ export default function MenuSelection() {
                 <div
                   onClick={() => setMenu(menu)}
                   key={i}
-                  className='cursor-pointer py-2 xl:pl-10 hover:bg-gray-100 text-[13px] uppercase '
+                  className='cursor-pointer py-2 xl:pl-10 text-blackColor hover:bg-gray-100 text-[13px] uppercase '
                 >
                   {menu}
                 </div>
